@@ -1,0 +1,15 @@
+// Multiplying by factors of 2
+
+#include <stdio.h>
+
+int main() {
+	int i, n;
+
+	printf("Please enter a number for i: ");
+	scanf("%d", &i);
+	printf("Please enter a number for n: ");
+	scanf("%d", &n);
+
+	printf("%d multiplied by 2 to the power of %d is %d\n", i, n, i << n);
+	return 0;
+}
