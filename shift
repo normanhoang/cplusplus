@@ -1,0 +1,15 @@
+// Logical shift
+
+#include <stdio.h>
+
+int main() {
+	int i;
+
+	printf("Please enter a number: ");
+	scanf("%d", &i);
+
+	i >>= 2;
+	printf("The number shifted right 2 is: %d\n", i);
+	printf("This was a %s", (i < 0) ? "arithmatic shift\n" : "logical shift\n");
+	return 0;
+}
