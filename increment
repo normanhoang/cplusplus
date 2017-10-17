@@ -1,0 +1,14 @@
+// difference between --i and i--
+
+#include <stdio.h>
+
+int main(){
+  int x = 1, y = 1;
+  int value;
+  
+  value = x++;
+  printf("Value is %d, and x is %d\n", value, x);
+  value = ++y;
+  printf("Value is %d, and y is %d\n", value, x);
+  return 0;
+}
