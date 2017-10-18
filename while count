@@ -1,4 +1,4 @@
-// character count, using do while loop
+// character count, using while loop
 
 #include <stdio.h>
 
