@@ -1,4 +1,4 @@
-// character count, using while loop
+// character count, using do while loop
 
 #include <stdio.h>
 
@@ -12,33 +12,32 @@ int main()
 
 	printf("Enter characters: ");
 
-	while (true) 
+	while (int(c) != 4)
 	{
-		c = getchar();
-
-		if (int(c) == 4)
-			break;
-		char_count++;
-
-		if (int(c) == 32)
+		if (c != 0) 
 		{
-			word_flip = 0;
-		}
-		else {
-			if (word_flip == 0) 
+			char_count++;
+
+			if (int(c) == 32)
 			{
-				word_count++;
-				word_flip = 1;
+				word_flip = 0;
+			}
+			else {
+				if (word_flip == 0)
+				{
+					word_count++;
+					word_flip = 1;
+				}
+			}
+
+			if (int(c) == 10) {
+				newline_count++;
 			}
 		}
-
-		if (int(c) == 10) {
-			newline_count++;
-		}
-
+		c = getchar();
 		//printf("Character entered: %d\n", int(c));
 		//putchar(c);
-	}
+	} 
 
 	printf("Character count is: %d\n", char_count);
 	printf("Word count is: %d\n", word_count);
