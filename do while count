@@ -18,11 +18,11 @@ int main()
 		{
 			char_count++;
 
-			if (int(c) == 32)
+			if (int(c) == 32) //space character
 			{
 				word_flip = 0;
 			}
-			else if (int(c) == 10)
+			else if (int(c) == 10) //newline character
 			{
 				newline_count++;
 				word_flip = 0;
