@@ -1,0 +1,47 @@
+// character count, using do while loop
+
+#include <stdio.h>
+
+int main()
+{
+	int char_count = 0;
+	int word_count = 0;
+	int newline_count = 0;
+	int word_flip = 0;
+	char c = 0;
+
+	printf("Enter characters: ");
+
+	while (int(c) != 4)
+	{
+		switch (int(c)) {
+		case 0:
+			break;
+		case 32:
+			char_count++;
+			word_flip = 0;
+			break;
+		case 10:
+			char_count++;
+			newline_count++;
+			word_flip = 0;
+			break;
+		default:
+			char_count++;
+			switch (word_flip) {
+			case 0:
+				word_count++;
+				word_flip = 1;
+				break;
+			}
+		}
+		c = getchar();
+		//printf("Character entered: %d\n", int(c));
+		//putchar(c);
+	} 
+
+	printf("Character count is: %d\n", char_count);
+	printf("Word count is: %d\n", word_count);
+	printf("Newline count is: %d\n", newline_count);
+	return(0);
+}
