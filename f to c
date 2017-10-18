@@ -8,8 +8,9 @@ int main()
 	float start_f = 0; // enter starting farenheit here
 	float end_f = 300; // enter ending farenheit here
 	int step = 20; // enter step size here
-	float c;
+	float c, f;
 
+	f = start_f;
 	printf("Farenheit     Celsius\n");
 	while (start_f <= end_f) {
 		c = (5.0 / 9.0) * (start_f - 32.0);
