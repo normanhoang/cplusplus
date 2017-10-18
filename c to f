@@ -1,0 +1,19 @@
+// celsius to farenheit, using for
+
+#include <stdio.h>
+
+
+int main()
+{
+	float start_c = 0; // enter starting farenheit here
+	float end_c = 19; // 
+	int step = 1; // enter step size here
+	float c, f;
+
+	printf("Celsius     Farenheit\n");
+	for (c = start_c; c <= end_c; c += step) {
+		f = (9.0 / 5.0) * c + 32;
+		printf("%3.0f       %10.1f\n", c, f);
+	}
+	return(0);
+}
