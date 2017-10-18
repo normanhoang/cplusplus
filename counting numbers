@@ -1,0 +1,49 @@
+// celsius to farenheit, using for
+
+#include <stdio.h>
+
+
+int main()
+{
+	char c = 0;
+	int count_0 = 0;
+	int count_1 = 0;
+	int count_2 = 0;
+	int count_3 = 0;
+	int count_4 = 0;
+	int count_all = 0;
+
+	printf("Enter characters: ");
+	while (int(c) != -1) {
+		switch (int(c))
+		{
+		case 0:
+			break;
+		case 48:
+			count_0++;
+			break;
+		case 49:
+			count_1++;
+			break;
+		case 50:
+			count_2++;
+			break;
+		case 51:
+			count_3++;
+			break;
+		case 52:
+			count_4++;
+			break;
+		default:
+			count_all++;
+		}
+
+		c = getchar();
+	}
+	printf("Total count of 0's is: %d\n", count_0);
+	printf("Total count of 1's is: %d\n", count_1);
+	printf("Total count of 2's is: %d\n", count_2);
+	printf("Total count of 3's is: %d\n", count_3);
+	printf("Total count of 4's is: %d\n", count_4);
+	return 0;
+}
