@@ -1,4 +1,4 @@
-// celsius to farenheit, using for
+// counting numbers 0-4
 
 #include <stdio.h>
 
