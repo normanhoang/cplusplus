@@ -10,6 +10,6 @@ int main() {
 
 	i >>= 2;
 	printf("The number shifted right 2 is: %d\n", i);
-	printf("This was a %s", (i < 0) ? "arithmatic shift\n" : "logical shift\n");
+	printf("This was a %s", (i < 0) ? "arithmetic shift\n" : "logical shift\n");
 	return 0;
 }
