@@ -1,0 +1,22 @@
+// Practice with Structures
+
+#include <stdio.h>
+
+struct Article {
+	int article_num;
+	int quantity;
+	char description[20];
+};
+
+void Print(struct Article *a) {
+	printf("Article number: %d\n", (*a).article_num);
+	printf("Quantity: %d\n", (*a).quantity);
+	printf("Description: %s\n", (*a).description);
+}
+
+int main()
+{
+	struct Article a1 = { 1001, 5, "Sports News" };
+	Print(&a1);
+	return 0;
+}
