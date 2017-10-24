@@ -1,0 +1,25 @@
+// inputting to a file
+
+#include <stdio.h>
+
+int main()
+{
+	FILE *pFile;
+	char filename[30];
+	int c = 0;
+
+	printf("Please put in a name for the file: ");
+	scanf("%s", &filename);
+	pFile = fopen(strcat(filename, ".txt"), "w+");
+	while (c != 1) {
+		c = getchar();
+		if (c == 1) {
+			printf("CTRL + A is a correct ending.\n");
+			break;
+		} 
+		fprintf(pFile, "%c", c);
+	}
+	//fprintf(pFile, "example text");
+	fclose(pFile);
+	return 0;
+}
